@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import RootState from '../../states';
 import Label from '../Atoms/Label';
 import ListLabel from '../Atoms/ListLabel';
-import GridArea from '../GridArea';
+import GridArea from '../../styles/GridArea';
 import { HomeGridArea } from '../Pages/TaskPage';
 
 const ProfileArea: React.FC = () => {

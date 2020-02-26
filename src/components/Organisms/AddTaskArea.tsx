@@ -1,6 +1,6 @@
 import React from 'react'
 import AddTask from '../Molecules/AddTask'
-import GridArea from '../GridArea'
+import GridArea from '../../styles/GridArea'
 import { HomeGridArea } from '../Pages/TaskPage'
 
 const AddTaskArea: React.FC = () => {

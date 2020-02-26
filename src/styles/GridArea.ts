@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const GridArea = styled.div<{ area: string }>(props => `
+type Props = {
+  area: string
+}
+
+const GridArea = styled.div<Props>(props => `
   grid-area: ${props.area};
   position: relative;
 `);

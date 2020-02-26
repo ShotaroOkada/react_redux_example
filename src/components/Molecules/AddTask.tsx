@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import Button from '../Atoms/Button';
 import Form from '../Atoms/Form';
@@ -23,15 +22,11 @@ const AddTask: React.FC = () => {
   }
 
   return (
-    <StyledAddTask>
+    <div>
       <Form value={inputTask} onChange={onChange} />
       <Button label='add' onClick={onClick} />
-    </StyledAddTask>
+    </div>
   )
 }
 
 export default AddTask;
-
-const StyledAddTask = styled.div`
-
-`
