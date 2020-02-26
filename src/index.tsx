@@ -10,10 +10,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux';
 
-const composeEnhancers = composeWithDevTools({
-  // Specify name here, actionsBlacklist, actionsCreators and other options if needed
-});
-
+const composeEnhancers = composeWithDevTools({});
 const logger = createLogger();
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [logger, sagaMiddleware];
