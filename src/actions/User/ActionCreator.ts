@@ -1,10 +1,11 @@
 import { createAsyncAction } from "typesafe-actions"
 import UserActionType from "./ActionType"
-import User from "../../states/User";
+import UserState from "../../states/User";
 import { GetUserParam } from "../../apis/User/GetUserApi";
+
 
 export const getUsers = createAsyncAction(
   UserActionType.GET_USER_REQUEST,
   UserActionType.GET_USER_SUCCESS,
   UserActionType.GET_USER_FAIL
-)<GetUserParam, User, Error>();
+)<GetUserParam, UserState, Error>();
