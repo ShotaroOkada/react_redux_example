@@ -19,9 +19,19 @@
 - HTTP通信：Axios
 - モックサーバ：JavaScript&Express 
 
-## Tips
+## 参考資料
 (実際に書いたり、チームメンバーに聞く方が100倍効率が良いので、1回くらい読み流す程度でok)
 - [Reactとは(useStateまで読めばok)](https://sbfl.net/blog/2019/11/12/react-hooks-introduction/)
 - [Reduxの概念であるFluxについて](https://medium.com/samyamashita/%E6%BC%AB%E7%94%BB%E3%81%A7%E8%AA%AC%E6%98%8E%E3%81%99%E3%82%8B-flux-1a219e50232b)
 - [Reduxとは(各役割が何をしたいかだけ抑えればok)](https://qiita.com/kitagawamac/items/49a1f03445b19cf407b7)
 - [Atomic Designとは](https://www.slideshare.net/ygoto3q/organizing-design-with-atomic-design-104872303?from_m_app=ios)
+
+## コードの読み方について
+読む順番はstates→actions→reducers→componentsがオススメ
+これが理解できるようになったら、actions→sagas→apis→sagas→actionsという流れも理解しよう！
+- states: アプリにて管理したい情報の型を定義(例:ユーザ名)
+- actions: アプリにて管理したい情報が変更される状況を記述(例:ユーザ名を編集)
+- reducers: 情報の具体的な変更処理を記述(例:ユーザ名を太郎から次郎に変更)
+- components: UI(アプリの見た目)を記述
+- sagas: 非同期処理を行う(例:ユーザ名の取得と見た目の表示を同時に行う)
+- api: 通信処理を記述(例:サーバからユーザ名を取得する)
