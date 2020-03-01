@@ -1,5 +1,6 @@
 const express = require('express');
 const user = require('./jsons/user.json')
+const tasks = require('./jsons/tasks.json')
 
 const app = express();
 const port_number = 3001;
@@ -18,9 +19,18 @@ app.get('/user', (req, res) => {
   if (id == "user01") {
     res.status(200).json(user)
   } else {
-    res.status(400).send('id is not correct')
+    res.status(400).send('id is not exist')
   }
 });
+
+app.get('/tasks', (req, res) => {
+  const id = req.query.id
+  if (id == "user01") {
+    res.status(200).json(tasks)
+  } else {
+    res.status(400).send('id is not exist')
+  }
+})
 
 app.listen(port_number, () => console.log('Listening on Port' + port_number));
 
