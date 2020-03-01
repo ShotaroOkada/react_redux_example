@@ -27,7 +27,8 @@
 - [Atomic Designとは](https://www.slideshare.net/ygoto3q/organizing-design-with-atomic-design-104872303?from_m_app=ios)
 
 ## コードの読み方について
-読む順番はstates→actions→reducers→componentsがオススメ
+読む順番はstates→actions→reducers→componentsがオススメ 
+<br/>
 これが理解できるようになったら、actions→sagas→apis→sagas→actionsという流れも理解しよう！
 - states: アプリにて管理したい情報の型を定義(例:ユーザ名)
 - actions: アプリにて管理したい情報が変更される状況を記述(例:ユーザ名を編集)
@@ -35,3 +36,10 @@
 - components: UI(アプリの見た目)を記述
 - sagas: 非同期処理を行う(例:ユーザ名の取得と見た目の表示を同時に行う)
 - api: 通信処理を記述(例:サーバからユーザ名を取得する)
+
+## 演習問題
+- ボタンやフォームの色や大きさを変えてみる(React, styled-components)
+- 画面の領域分けを変えてみる(React, styled-components, Grid Layout)
+- タスクの削除機能を実装してみる(React, Redux)
+- 画面遷移を実装してみる(React, React Router)
+- モックサーバからtasksを取得してみる(Axios, Redux, Redux Saga)
