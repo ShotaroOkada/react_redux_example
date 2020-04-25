@@ -2,6 +2,11 @@
 - node 13.6.0
 - yarn 1.21.1
 
+## 環境構築方法
+1. [nodeをインストール](https://nodejs.org/ja/)
+2. yarnをインストール(コマンドライン上にて`npm install -g yarn`)
+3. (`Error: Cannot find module 'express'`と言われた場合は、コマンドライン上にて`yarn add express`)
+
 ## アプリ実行方法
 * 初回clone時には `yarn install` する
 
