@@ -5,6 +5,7 @@ import Label from '../Atoms/Label';
 import ListLabel from '../Atoms/ListLabel';
 import GridArea from '../../styles/GridArea';
 import { HomeGridArea } from '../Pages/TaskPage';
+import ViewAndDeleteTask from '../Molecules/ViewAndDeleteTask';
 
 const ProfileArea: React.FC = () => {
   const user = useSelector<RootState, RootState['user']>(state => state.user);
@@ -15,8 +16,9 @@ const ProfileArea: React.FC = () => {
         <Label text={`Name: ${user.name}`} />
         <Label text={`Age: ${user.age}`} />
         <Label text="Tasks:" />
+
         {tasks.map((task, index) => {
-          return <ListLabel key={task + index} text={task} />
+          return <ViewAndDeleteTask index={index} task={task} />
         })}
       </GridArea>
     )

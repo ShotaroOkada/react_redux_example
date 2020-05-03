@@ -11,7 +11,24 @@ export default (state: TasksState = initialState, action: TasksAction): TasksSta
         ...state,
         action.payload
       ]
+    case TasksActionType.DELETE_TASK:
+      return [
+        ...state.slice(0,action.payload),
+        ...state.slice(action.payload+1)
+      ]
     default:
       return state
   }
-} 
+}
+
+/*
+const state = [1,2,3,4,5]
+
+state.slice(0,2) //[1,2]
+state.slice(3) //[4,5]
+
+return [
+  ...state.slice(0,2),
+  ...state.slice(3)
+]
+*/
