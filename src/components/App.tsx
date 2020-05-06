@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import TaskPage from './Pages/TaskPage';
-import { useDispatch } from 'react-redux';
-import { getUsers } from '../actions/User/ActionCreator';
 
+// ログインの画面処理や画面遷移などを記述
 function App() {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getUsers.request({ id: "user01" }));
-  })
   return (
     <TaskPage />
   );

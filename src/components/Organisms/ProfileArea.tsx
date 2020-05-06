@@ -4,14 +4,17 @@ import RootState from '../../states';
 import Label from '../Atoms/Label';
 import ListLabel from '../Atoms/ListLabel';
 import GridArea from '../../styles/GridArea';
-import { HomeGridArea } from '../Pages/TaskPage';
 
-const ProfileArea: React.FC = () => {
+type Props = {
+  area: string
+}
+const ProfileArea: React.FC<Props> = (props) => {
+  const { area } = props;
   const user = useSelector<RootState, RootState['user']>(state => state.user);
   const tasks = useSelector<RootState, RootState['tasks']>(state => state.tasks);
   if (user.name) {
     return (
-      <GridArea area={HomeGridArea.Profile}>
+      <GridArea area={area}>
         <Label text={`Name: ${user.name}`} />
         <Label text={`Age: ${user.age}`} />
         <Label text="Tasks:" />
@@ -22,7 +25,7 @@ const ProfileArea: React.FC = () => {
     )
   } else {
     return (
-      <GridArea area={HomeGridArea.Profile}>
+      <GridArea area={area}>
         <Label text="login failed" />
       </GridArea>
     )

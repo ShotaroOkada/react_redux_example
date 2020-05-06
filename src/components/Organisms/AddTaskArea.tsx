@@ -1,11 +1,15 @@
 import React from 'react'
 import AddTask from '../Molecules/AddTask'
 import GridArea from '../../styles/GridArea'
-import { HomeGridArea } from '../Pages/TaskPage'
 
-const AddTaskArea: React.FC = () => {
+type Props = {
+  area: string;
+}
+
+const AddTaskArea: React.FC<Props> = (props) => {
+  const { area } = props
   return (
-    <GridArea area={HomeGridArea.AddTask}>
+    <GridArea area={area}>
       <AddTask />
     </GridArea>
   )
