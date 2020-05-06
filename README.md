@@ -31,7 +31,7 @@
 - [Reduxとは(各役割が何をしたいかだけ抑えればok)](https://qiita.com/kitagawamac/items/49a1f03445b19cf407b7)
 - [Atomic Designとは](https://www.slideshare.net/ygoto3q/organizing-design-with-atomic-design-104872303?from_m_app=ios)
 
-## コードの読み方について
+## コードの読み方について（Redux）
 読む順番はstates→actions→reducers→componentsがオススメ 
 <br/>
 これが理解できるようになったら、actions→sagas→apis→sagas→actionsという流れも理解しよう！
@@ -41,6 +41,16 @@
 - components: UI(アプリの見た目)を記述
 - sagas: 非同期処理を行う(例:ユーザ名の取得と見た目の表示を同時に行う)
 - api: 通信処理を記述(例:サーバからユーザ名を取得する)
+
+## コードの読み方について（React）
+以下、componentsフォルダ内の説明です。
+下に行くほど大きいComponentになっています。
+- Atoms：UIとしての最小単位　　　→ Button, Form
+- Molecules：UXとしての最小単位 → Login Form, Add Task
+- Organisms：１つの領域を表現   → Header, Side Bar
+- Templates：画面の領域分けを表現 → Headerは上部20%, Side Barは左30%… (今回はGridLayoutによって表現)
+- Pages：初期データの取得、Templatesに実データを渡すなど
+- App.tsx：ログイン等の画面処理、CSSの初期化、画面遷移など
 
 ## 演習問題
 - ボタンやフォームの色や大きさを変えてみる(React, styled-components)
