@@ -9,7 +9,7 @@ export default (state: TasksState = initialState, action: TasksAction): TasksSta
     case TasksActionType.ADD_TASK:
       return [
         ...state,
-        action.payload
+        action.taskName
       ]
     default:
       return state

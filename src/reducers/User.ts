@@ -11,7 +11,7 @@ export default (state: UserState = initialState, action: UserAction): UserState 
   switch (action.type) {
     case UserActionType.GET_USER_SUCCESS:
       return {
-        ...action.payload
+        ...action.user
       }
     default:
       return state

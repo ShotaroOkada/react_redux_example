@@ -1,6 +1,9 @@
-import { StateType } from "typesafe-actions";
-import rootReducer from "../reducers";
+import UserState from "./User";
+import TasksState from "./Tasks";
 
-type RootState = StateType<typeof rootReducer>
+type RootState = {
+  user: UserState,
+  tasks: TasksState
+}
 
 export default RootState;
