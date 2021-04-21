@@ -1,10 +1,15 @@
 import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import TaskPage from './Pages/TaskPage';
+
+export const queryClient = new QueryClient()
 
 // ログインの画面処理や画面遷移などを記述
 function App() {
   return (
-    <TaskPage />
+    <QueryClientProvider client={queryClient}>
+      <TaskPage />
+    </QueryClientProvider>
   );
 }
 

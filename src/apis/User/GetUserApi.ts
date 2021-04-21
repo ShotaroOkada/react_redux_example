@@ -1,18 +1,14 @@
+import { AxiosPromise } from "axios";
 import Axios from "../Axios";
-import UserModel from "./Model";
 
 export type GetUserParam = {
   id: string
 }
 
-export async function getUserApi({ id }: GetUserParam) {
-  try {
-    return await Axios.get<UserModel>('/user', {
-      params: {
-        id
-      }
-    })
-  } catch (e) {
-    throw new Error(e)
-  }
+export function getUserApi({ id }: GetUserParam): AxiosPromise<void> {
+  return Axios.get('/user', {
+    params: {
+      id
+    }
+  })
 };
